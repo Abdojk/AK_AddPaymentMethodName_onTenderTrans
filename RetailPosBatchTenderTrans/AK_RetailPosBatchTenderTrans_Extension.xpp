@@ -1,0 +1,22 @@
+/// <summary>
+/// Extension of <c>RetailPosBatchTenderTrans</c> to add a display method
+/// that returns the payment method name from <c>RetailTenderTypeTable</c>.
+/// </summary>
+[ExtensionOf(tableStr(RetailPosBatchTenderTrans))]
+final class AK_RetailPosBatchTenderTrans_Extension
+{
+    /// <summary>
+    /// Returns the tender type name for the current record's store and tender type.
+    /// </summary>
+    /// <returns>The tender type name, or empty string if not found.</returns>
+    public display RetailTenderTypeName AK_paymentMethodName()
+    {
+        RetailTenderTypeTable tenderType;
+
+        select firstonly name from tenderType
+            where tenderType.storeId      == this.storeId
+               && tenderType.tenderTypeId == this.tenderTypeId;
+
+        return tenderType.name;
+    }
+}
