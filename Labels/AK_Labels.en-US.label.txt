@@ -1,0 +1,2 @@
+PaymentMethodName=Payment method name
+ ;The name of the payment tender type displayed on the Shift Tender Transactions grid

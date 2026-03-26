@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>AK_RetailPosBatchTable.Extension</Name>
+  <ExtendedForm>RetailPosBatchTable</ExtendedForm>
+  <Controls>
+    <AxFormExtensionControl>
+      <Name>AK_PaymentMethodName</Name>
+      <FormControlExtensionType>StringEdit</FormControlExtensionType>
+      <Parent>RetailPosBatchTenderTransGrid</Parent>
+      <InsertAfter>TenderTypeId</InsertAfter>
+      <Properties>
+        <AxFormControlExtensionProperty>
+          <Name>DataSource</Name>
+          <Value>RetailPosBatchTenderTrans</Value>
+        </AxFormControlExtensionProperty>
+        <AxFormControlExtensionProperty>
+          <Name>DataMethod</Name>
+          <Value>AK_paymentMethodName</Value>
+        </AxFormControlExtensionProperty>
+        <AxFormControlExtensionProperty>
+          <Name>Label</Name>
+          <Value>@AK:PaymentMethodName</Value>
+        </AxFormControlExtensionProperty>
+        <AxFormControlExtensionProperty>
+          <Name>AllowEdit</Name>
+          <Value>No</Value>
+        </AxFormControlExtensionProperty>
+        <AxFormControlExtensionProperty>
+          <Name>AutoDeclaration</Name>
+          <Value>No</Value>
+        </AxFormControlExtensionProperty>
+      </Properties>
+    </AxFormExtensionControl>
+  </Controls>
+</AxFormExtension>
